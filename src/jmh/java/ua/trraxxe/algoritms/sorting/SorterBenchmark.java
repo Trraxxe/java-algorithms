@@ -28,9 +28,9 @@ public class SorterBenchmark {
             bestCase[i] = i;
             worstCase[i] = ARRAY_SIZE - i - 1;
             if (i < ARRAY_SIZE / 2) {
-                averageCase[i] = i;
+                averageCase[i] = (ARRAY_SIZE / 2) + i;
             } else {
-                averageCase[i] = ARRAY_SIZE - i - 1;
+                averageCase[i] = i;
             }
         }
     }
