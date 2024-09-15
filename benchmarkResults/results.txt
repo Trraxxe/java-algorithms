@@ -1,4 +1,7 @@
-Benchmark                                             Mode  Cnt   Score    Error  Units
-SorterBenchmark.bubble_sorter_average_case_benchmark  avgt    4   2.343 ±  0.149   s/op
-SorterBenchmark.bubble_sorter_best_case_benchmark     avgt    4  ≈ 10⁻⁴            s/op
-SorterBenchmark.bubble_sorter_worst_case_benchmark    avgt    4   2.573 ±  0.228   s/op
+Benchmark                                                Mode  Cnt   Score    Error  Units
+SorterBenchmark.bubble_sorter_average_case_benchmark     avgt    4   1.968 ±  0.392   s/op
+SorterBenchmark.bubble_sorter_best_case_benchmark        avgt    4  ≈ 10⁻⁴            s/op
+SorterBenchmark.bubble_sorter_worst_case_benchmark       avgt    4   2.590 ±  0.343   s/op
+SorterBenchmark.selection_sorter_average_case_benchmark  avgt    4   2.554 ±  0.121   s/op
+SorterBenchmark.selection_sorter_best_case_benchmark     avgt    4   0.971 ±  0.249   s/op
+SorterBenchmark.selection_sorter_worst_case_benchmark    avgt    4   2.679 ±  1.707   s/op
