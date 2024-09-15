@@ -13,6 +13,7 @@ public class SorterBenchmark {
     private static final int ARRAY_SIZE = 100_000;
 
     private static final Sorter BUBBLE_SORTER = new BubbleSorter();
+    private static final Sorter SELECTION_SORTER = new SelectionSorter();
 
     private int[] bestCase;
     private int[] averageCase;
@@ -26,7 +27,7 @@ public class SorterBenchmark {
         for (int i = 0; i < ARRAY_SIZE; i++) {
             bestCase[i] = i;
             worstCase[i] = ARRAY_SIZE - i - 1;
-            if (i % 2 == 0) {
+            if (i < ARRAY_SIZE / 2) {
                 averageCase[i] = i;
             } else {
                 averageCase[i] = ARRAY_SIZE - i - 1;
@@ -47,5 +48,20 @@ public class SorterBenchmark {
     @Benchmark
     public int[] bubble_sorter_worst_case_benchmark() {
         return BUBBLE_SORTER.sort(worstCase);
+    }
+
+    @Benchmark
+    public int[] selection_sorter_best_case_benchmark() {
+        return SELECTION_SORTER.sort(bestCase);
+    }
+
+    @Benchmark
+    public int[] selection_sorter_average_case_benchmark() {
+        return SELECTION_SORTER.sort(averageCase);
+    }
+
+    @Benchmark
+    public int[] selection_sorter_worst_case_benchmark() {
+        return SELECTION_SORTER.sort(worstCase);
     }
 }
