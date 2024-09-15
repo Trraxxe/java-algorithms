@@ -14,6 +14,7 @@ public class SorterBenchmark {
 
     private static final Sorter BUBBLE_SORTER = new BubbleSorter();
     private static final Sorter SELECTION_SORTER = new SelectionSorter();
+    private static final Sorter INSERTION_SORTER = new InsertionSorter();
 
     private int[] bestCase;
     private int[] averageCase;
@@ -63,5 +64,20 @@ public class SorterBenchmark {
     @Benchmark
     public int[] selection_sorter_worst_case_benchmark() {
         return SELECTION_SORTER.sort(worstCase);
+    }
+
+    @Benchmark
+    public int[] insertion_sorter_best_case_benchmark() {
+        return INSERTION_SORTER.sort(bestCase);
+    }
+
+    @Benchmark
+    public int[] insertion_sorter_average_case_benchmark() {
+        return INSERTION_SORTER.sort(averageCase);
+    }
+
+    @Benchmark
+    public int[] insertion_sorter_worst_case_benchmark() {
+        return INSERTION_SORTER.sort(worstCase);
     }
 }
