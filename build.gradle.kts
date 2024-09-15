@@ -18,3 +18,8 @@ dependencies {
 tasks.test {
     useJUnitPlatform()
 }
+
+jmh {
+    resultsFile = project.file("${project.rootDir}/benchmarkResults/results.txt")
+//    profilers.addAll("gc")
+}
