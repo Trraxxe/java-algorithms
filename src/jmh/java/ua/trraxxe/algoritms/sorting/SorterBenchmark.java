@@ -5,9 +5,9 @@ import org.openjdk.jmh.annotations.*;
 
 @BenchmarkMode(Mode.AverageTime)
 @State(Scope.Benchmark)
-@Warmup(iterations = 2)
-@Measurement(iterations = 4)
-@Fork(value = 1, warmups = 0)
+@Warmup(iterations = 3)
+@Measurement(iterations = 5)
+@Fork(value = 5, warmups = 0)
 public class SorterBenchmark {
 
     private static final int ARRAY_SIZE = 100_000;
